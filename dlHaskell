@@ -24,7 +24,7 @@ else
     read -p 'Do you want to install haskell ? (y/n): ' haskelldl
     if [ $haskelldl == "y" ]
     then       
-	sudo aapt-get install haskell-platform -y
+	sudo apt-get install haskell-platform -y
     else
         echo "you haven't download haskell" 
     fi
