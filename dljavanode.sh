@@ -53,4 +53,24 @@ else
 fi
 echo
 
+# Check if git is installed, if not install it
+git version &> /dev/null 
+if [ `cut -d' ' -f1 <<< $?` -eq 0 ] 
+then
+    echo "git is installed" 
+else      
+	sudo apt-get install git-all
+fi
+echo
+
+# Check if jhipster is installed, if not install it
+npm -v &> /dev/null 
+if [ `cut -d' ' -f1 <<< $?` -eq 0 ] 
+then
+    echo "jhipster is installed" 
+else      
+	npm install -g generator-jhipster
+fi
+echo
+
 exit 0
